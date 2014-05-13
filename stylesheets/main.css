@@ -5,18 +5,17 @@ body {
   font-size: 16px;
   line-height: 1.2;
   color: #fff;
-  background-color: #404040;
+  background-image: url("../photos/body-bg.jpg");
 }
 
 .container {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .header {
   height: 120px;
   background-color: #fff;
-  display: flex;
 }
 
 .header-title h1 {
@@ -91,54 +90,93 @@ textarea {
 }
 
 .content {
-  width: 958px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .header-content {
-  width: 958px;
+  max-width: 958px;
   margin: 0 auto;
   padding: 30px 0;
 }
 
 .posts-box {
-  margin-top: 60px;
-  display: inline-block;
-  width: 958px;
-  height: 355px;
+  min-height: 355px;
+}
+@media screen and (max-width: 974px) {
+  .posts-box {
+    max-width: 713px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 728px) {
+  .posts-box {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 504px) {
+  .posts-box {
+    text-align: center;
+  }
 }
 .posts-box h1 {
   padding: 10px;
+  font-size: 34px;
+  font-weight: normal;
 }
 .posts-box h4 {
   font-size: 12px;
-  color: #777877;
+  color: #787878;
   text-align: right;
-  margin-top: 210px;
+  margin-top: 145px;
 }
 
-.posts-img-1 {
+.post {
   display: inline-block;
-  float: left;
-  margin-right: 27px;
+  margin-right: 22px;
+  margin-top: 60px;
+}
+
+.post:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 974px) {
+  .post:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
+  .post:nth-child(4n+4) {
+    margin-right: 22px;
+  }
+}
+@media screen and (max-width: 728px) {
+  .post:nth-child(3n+3) {
+    margin-right: 22px;
+  }
+}
+.posts-img-1 {
   background-image: url("../photos/1.png");
 }
 
 .posts-img-2 {
-  float: left;
-  margin-right: 27px;
   background-image: url("../photos/2.png");
 }
 
 .posts-img-3 {
-  display: inline-block;
-  margin: 0;
   background-image: url("../photos/3.png");
+}
+
+.posts-img-4 {
+  background-image: url("../photos/1.png");
 }
 
 .posts-img-1,
 .posts-img-2,
-.posts-img-3 {
+.posts-img-3,
+.posts-img-4 {
   width: 220px;
   height: 300px;
   text-align: left;
@@ -149,9 +187,13 @@ textarea {
 }
 .content-text h1 {
   font-weight: normal;
+  font-size: 34px;
 }
 .content-text h3 {
   font-weight: normal;
+  font-family: "lato";
+  color: #787878;
+  font-size: 18px;
 }
 
 .footer {

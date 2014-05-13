@@ -1,3 +1,11 @@
+$gray-text-color: #787878;
+$active-color:#303132;
+
+$tablet-1: 974px;
+$tablet-2: 728px;
+$mobile-1: 504px;
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -5,18 +13,17 @@ body {
 	font-size: 16px;
 	line-height: 1.2;
 	color: #fff;
-	background-color: #404040;
+	background-image: url('../photos/body-bg.jpg');
 }
 
 .container{
-	width: 1000px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
 .header{
 	height: 120px;
 	background-color: #fff;
-	display:flex;
 }
 .header-title{
 	h1{
@@ -30,7 +37,7 @@ body {
 		font-family: "lato";
 		font-size:18px;
 		font-weight: bold;
-		color: #787878;
+		color: $gray-text-color;
 		margin: 0;
 	}
 }
@@ -44,12 +51,12 @@ body {
 	margin-top: 10px;
 }
 textarea{
-margin-left: 190px;
-margin-bottom:-10px;
+	margin-left: 190px;
+	margin-bottom:-10px;
 }
 .lang-nav { 
 	text-align: right;
-margin: -15px 0 5px 0;
+	margin: -15px 0 5px 0;
 	li {
 		display: inline-block;
 		list-style-type: none;
@@ -57,7 +64,7 @@ margin: -15px 0 5px 0;
 
 		a {
 			font-family: "lato";
-			color: #787878;
+			color: $gray-text-color;
 			font-size: 11px;
 			text-decoration: none;
 			font-weight:bold;
@@ -65,7 +72,7 @@ margin: -15px 0 5px 0;
 	}
 }
 .lang-nav .active {
-	color: #303132;
+	color: $active-color;
 }
 
 .menu-nav { 
@@ -78,7 +85,7 @@ margin: -15px 0 5px 0;
 
 		a {
 			font-family: "lato";
-			color: #787878;
+			color: $gray-text-color;
 			font-size: 18px;
 			text-decoration: none;
 		}
@@ -86,82 +93,125 @@ margin: -15px 0 5px 0;
 }
 
 .menu-nav .active {
-	color: #303132;
+	color: $active-color;
 }
 
-
 .content{
-	width:958px;
+	max-width: 960px;
 	margin:0 auto;
 }
 
 .header-content{
-	width:958px;
+	max-width:958px;
 	margin:0 auto;
 	padding:30px 0;
 }
 
 .posts-box{
-	margin-top: 60px;
-	display: inline-block;
-	width:958px;
-	height: 355px;
-	h1{
-		padding:10px;
+	min-height: 355px;
+
+	@media screen and (max-width: $tablet-1) {
+		max-width: 713px;
+		margin: 0 auto;
 	}
-	h4{
-		font-size: 12px;
-		color: #777877;
-		text-align: right;
-		margin-top: 210px;
+
+		@media screen and (max-width: $tablet-2) {
+		max-width: 500px;
+		margin: 0 auto;
+		text-align: center;
 	}
-}
 
-.posts-img-1 {
-	display: inline-block;
-	float: left;
-	margin-right: 27px;
-	background-image: url('../photos/1.png');	
-
-}
-.posts-img-2 {
-	float: left;
-	margin-right: 27px;
-
-	background-image: url('../photos/2.png');
-}
-.posts-img-3 {
-	display: inline-block;
-	margin: 0;
-	background-image: url('../photos/3.png');
-}
-.posts-img-1,
-.posts-img-2,
-.posts-img-3{
-	width: 220px;
-	height: 300px;
-	text-align:left;
-}
-
-.content-text{
-	text-align:center;
-	h1{
-		font-weight: normal;
+	@media screen and (max-width: $mobile-1) {
+		text-align: center;
 	}
-	h3{
-		font-weight: normal;
-	}
-}
 
-.footer{
-	height:75px;
-	margin-top:80px;
-	h4{
-		font-size: 11px;
+
+		h1{
+			padding:10px;
+			font-size: 34px;
+			font-weight: normal;
+		}
+		h4{
+			font-size: 12px;
+			color: $gray-text-color;
+			text-align: right;
+			margin-top: 145px;
+		}
+	}
+
+	.post {
 		display: inline-block;
-		color: #7f7f7f;
+		margin-right: 22px;
+		margin-top: 60px
 	}
-}
-.create{
-	float:right;
-}
+
+
+	.post:nth-child(4n+4) {
+		margin-right: 0;
+	}
+
+
+	@media screen and (max-width: $tablet-1) {
+		.post:nth-child(3n+3) {
+			margin-right: 0;
+		}
+
+		.post:nth-child(4n+4) {
+			margin-right: 22px;
+		}
+	}
+
+	@media screen and (max-width: $tablet-2) {
+		.post:nth-child(3n+3) {
+			margin-right: 22px;
+		}
+	}
+
+	.posts-img-1 {
+		background-image: url('../photos/1.png');
+	}
+	.posts-img-2 {
+		background-image: url('../photos/2.png');
+	}
+	.posts-img-3 {
+		background-image: url('../photos/3.png');
+	}
+	.posts-img-4 {
+		background-image: url('../photos/1.png');
+	}
+	.posts-img-1,
+	.posts-img-2,
+	.posts-img-3,
+	.posts-img-4{
+		width: 220px;
+		height: 300px;
+		text-align:left;
+	}
+
+
+	.content-text{
+		text-align:center;
+		h1{
+			font-weight: normal;
+			font-size: 34px;
+		}
+		h3{
+			font-weight: normal;
+			font-family: "lato";
+			color: $gray-text-color;
+			font-size: 18px;
+		}
+	}
+
+	.footer{
+		height:75px;
+		margin-top:80px;
+		h4{
+			font-size: 11px;
+			display: inline-block;
+			color: #7f7f7f;
+		}
+	}
+	.create{
+		float:right;
+	}
