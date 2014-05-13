@@ -1,0 +1,167 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 1.2;
+	color: #fff;
+	background-color: #404040;
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.header{
+	height: 120px;
+	background-color: #fff;
+	display:flex;
+}
+.header-title{
+	h1{
+		font-family: "lato";
+		font-size:34px;
+		font-weight: bold;
+		color: red;
+		margin: 0;
+	}
+	h3{
+		font-family: "lato";
+		font-size:18px;
+		font-weight: bold;
+		color: #787878;
+		margin: 0;
+	}
+}
+
+.header-left{
+	display:inline-block;
+}
+.header-right{
+	display:inline-block;
+	float:right;
+	margin-top: 10px;
+}
+textarea{
+margin-left: 190px;
+margin-bottom:-10px;
+}
+.lang-nav { 
+	text-align: right;
+margin: -15px 0 5px 0;
+	li {
+		display: inline-block;
+		list-style-type: none;
+		padding: 0 10px;
+
+		a {
+			font-family: "lato";
+			color: #787878;
+			font-size: 11px;
+			text-decoration: none;
+			font-weight:bold;
+		}
+	}
+}
+.lang-nav .active {
+	color: #303132;
+}
+
+.menu-nav { 
+	text-align: right;
+	margin:0;
+	li {
+		display: inline-block;
+		list-style-type: none;
+		padding:0 10px;
+
+		a {
+			font-family: "lato";
+			color: #787878;
+			font-size: 18px;
+			text-decoration: none;
+		}
+	}
+}
+
+.menu-nav .active {
+	color: #303132;
+}
+
+
+.content{
+	width:958px;
+	margin:0 auto;
+}
+
+.header-content{
+	width:958px;
+	margin:0 auto;
+	padding:30px 0;
+}
+
+.posts-box{
+	margin-top: 60px;
+	display: inline-block;
+	width:958px;
+	height: 355px;
+	h1{
+		padding:10px;
+	}
+	h4{
+		font-size: 12px;
+		color: #777877;
+		text-align: right;
+		margin-top: 210px;
+	}
+}
+
+.posts-img-1 {
+	display: inline-block;
+	float: left;
+	margin-right: 27px;
+	background-image: url('../photos/1.png');	
+
+}
+.posts-img-2 {
+	float: left;
+	margin-right: 27px;
+
+	background-image: url('../photos/2.png');
+}
+.posts-img-3 {
+	display: inline-block;
+	margin: 0;
+	background-image: url('../photos/3.png');
+}
+.posts-img-1,
+.posts-img-2,
+.posts-img-3{
+	width: 220px;
+	height: 300px;
+	text-align:left;
+}
+
+.content-text{
+	text-align:center;
+	h1{
+		font-weight: normal;
+	}
+	h3{
+		font-weight: normal;
+	}
+}
+
+.footer{
+	height:75px;
+	margin-top:80px;
+	h4{
+		font-size: 11px;
+		display: inline-block;
+		color: #7f7f7f;
+	}
+}
+.create{
+	float:right;
+}
