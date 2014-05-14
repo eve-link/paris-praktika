@@ -152,6 +152,98 @@ textarea {
   margin: 0 auto;
 }
 
+.blog-article-content-text {
+  text-align: center;
+  margin-top: 110px;
+}
+.blog-article-content-text h1 {
+  font-family: "Montserrat Alternates";
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+.blog-article-content-text h3 {
+  font-family: "Montserrat Alternates";
+  font-size: 14px;
+  font-weight: bold;
+  color: #787878;
+  margin-top: 5px;
+}
+.blog-article-content-text p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: normal;
+  color: #c2c2c2;
+  margin: 50px 0 50px 0;
+}
+
+.reply {
+  border-top: 5px solid gray;
+  border-bottom: 5px solid gray;
+}
+
+.reply h1 {
+  font-family: "Montserrat Alternates";
+  font-size: 24px;
+  font-weight: bold;
+  margin: 50px 0 30px 0;
+}
+.reply p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: normal;
+  color: #c2c2c2;
+  display: inline-block;
+}
+.reply textarea {
+  border: none;
+  background: none;
+}
+
+.send {
+  margin: 20px 0 45px 0;
+}
+
+.send-button {
+  border: none;
+  background-color: #ca0c0c;
+  width: 82px;
+  height: 37px;
+  color: #650606;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.replay-column {
+  border-bottom: 1px solid black;
+}
+
+.responses h1 {
+  margin: 30px 0 5px;
+}
+
+.name {
+  font-family: "Montserrat Alternates";
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.response {
+  font-family: "Open Sans";
+  color: #c2c2c2;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.date {
+  color: #787878;
+  font-size: 11px;
+  display: inline-block;
+}
+
 .header-content {
   max-width: 958px;
   margin: 0 auto;
@@ -284,6 +376,7 @@ textarea {
 }
 .create {
   float: right;
+  display: inline-block;
 }
 
 @media screen and (max-width: 974px) {
