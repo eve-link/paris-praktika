@@ -44,7 +44,6 @@ body {
   position: relative;
   -webkit-box-flex: 1;
   flex: 1 1 0px;
-  text-align: right;
 }
 
 @media screen and (max-width: 740px) {
@@ -74,7 +73,7 @@ body {
 }
 
 textarea {
-  margin-left: 190px;
+  margin-left: 155px;
   margin-bottom: -10px;
 }
 
@@ -255,6 +254,11 @@ textarea {
   font-size: 18px;
 }
 
+@media screen and (max-width: 974px) {
+  .content-text {
+    padding: 10px;
+  }
+}
 .footer {
   height: 75px;
   margin-top: 80px;
@@ -265,6 +269,27 @@ textarea {
   color: #7f7f7f;
 }
 
+@media screen and (max-width: 974px) {
+  .footer {
+    margin-top: 80px;
+    padding: 10px;
+    text-align: center;
+  }
+  .footer h4 {
+    font-size: 11px;
+    display: block;
+    color: #7f7f7f;
+    text-align: center;
+  }
+}
 .create {
   float: right;
+}
+
+@media screen and (max-width: 974px) {
+  .create {
+    float: none;
+    text-align: center;
+    margin: 0;
+  }
 }
