@@ -45,15 +45,59 @@ body {
 .header-left{
 	display:inline-block;
 }
+
 .header-right{
 	display:inline-block;
 	float:right;
 	margin-top: 10px;
+	position: relative;
+	-webkit-box-flex: 1;
+	flex: 1 1 0px;
+	text-align: right;
 }
+@media screen and (max-width: 740px) {
+	.header-right{
+		left: 0;
+		right: 0;
+		top: 110px;
+		position:absolute;
+	}
+}
+
+
+.menu-button {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+}
+
+
+
+
+.menu-button .menu-stripe{
+	display: block;
+	width: 23px;
+	height: 4px;
+	border-radius: 5px;
+	background-color: rgba(27, 33, 36, 0.670588);
+	margin:5px 0;
+}
+
 textarea{
 	margin-left: 190px;
 	margin-bottom:-10px;
 }
+
+@media screen and (max-width: 740px) {
+	.menu-nav-top{
+		display:none;
+	}
+}
+
 .lang-nav { 
 	text-align: right;
 	margin: -15px 0 5px 0;
@@ -78,6 +122,8 @@ textarea{
 .menu-nav { 
 	text-align: right;
 	margin:0;
+	padding-left:0;
+
 	li {
 		display: inline-block;
 		list-style-type: none;
@@ -89,6 +135,30 @@ textarea{
 			font-size: 18px;
 			text-decoration: none;
 		}
+	}
+
+	@media screen and (max-width: 740px) {
+		li { padding-left: 0;
+			text-align: left;
+			display: block;
+			float:none;
+			background-color: white;
+			border-bottom:1px solid $gray-text-color;
+
+			a {
+				color: $gray-text-color;
+				font-size: 20px;
+				font-weight: bold;
+				margin: 0;
+				padding:0;
+				text-align: left;
+				display: block;
+				padding: 8px 25px;
+			}
+		}
+	}
+	li:hover {
+		background-color: red;
 	}
 }
 
@@ -115,7 +185,7 @@ textarea{
 		margin: 0 auto;
 	}
 
-		@media screen and (max-width: $tablet-2) {
+	@media screen and (max-width: $tablet-2) {
 		max-width: 500px;
 		margin: 0 auto;
 		text-align: center;
@@ -126,92 +196,92 @@ textarea{
 	}
 
 
-		h1{
-			padding:10px;
-			font-size: 34px;
-			font-weight: normal;
-		}
-		h4{
-			font-size: 12px;
-			color: $gray-text-color;
-			text-align: right;
-			margin-top: 145px;
-		}
+	h1{
+		padding:10px;
+		font-size: 34px;
+		font-weight: normal;
 	}
-
-	.post {
-		display: inline-block;
-		margin-right: 22px;
-		margin-top: 60px
+	h4{
+		font-size: 12px;
+		color: $gray-text-color;
+		text-align: right;
+		margin-top: 145px;
 	}
+}
+
+.post {
+	display: inline-block;
+	margin-right: 22px;
+	margin-top: 60px
+}
 
 
-	.post:nth-child(4n+4) {
+.post:nth-child(4n+4) {
+	margin-right: 0;
+}
+
+
+@media screen and (max-width: $tablet-1) {
+	.post:nth-child(3n+3) {
 		margin-right: 0;
 	}
 
+	.post:nth-child(4n+4) {
+		margin-right: 22px;
+	}
+}
 
-	@media screen and (max-width: $tablet-1) {
-		.post:nth-child(3n+3) {
-			margin-right: 0;
-		}
+@media screen and (max-width: $tablet-2) {
+	.post:nth-child(3n+3) {
+		margin-right: 22px;
+	}
+}
 
-		.post:nth-child(4n+4) {
-			margin-right: 22px;
-		}
-	}
-
-	@media screen and (max-width: $tablet-2) {
-		.post:nth-child(3n+3) {
-			margin-right: 22px;
-		}
-	}
-
-	.posts-img-1 {
-		background-image: url('../photos/1.png');
-	}
-	.posts-img-2 {
-		background-image: url('../photos/2.png');
-	}
-	.posts-img-3 {
-		background-image: url('../photos/3.png');
-	}
-	.posts-img-4 {
-		background-image: url('../photos/1.png');
-	}
-	.posts-img-1,
-	.posts-img-2,
-	.posts-img-3,
-	.posts-img-4{
-		width: 220px;
-		height: 300px;
-		text-align:left;
-	}
+.posts-img-1 {
+	background-image: url('../photos/1.png');
+}
+.posts-img-2 {
+	background-image: url('../photos/2.png');
+}
+.posts-img-3 {
+	background-image: url('../photos/3.png');
+}
+.posts-img-4 {
+	background-image: url('../photos/1.png');
+}
+.posts-img-1,
+.posts-img-2,
+.posts-img-3,
+.posts-img-4{
+	width: 220px;
+	height: 300px;
+	text-align:left;
+}
 
 
-	.content-text{
-		text-align:center;
-		h1{
-			font-weight: normal;
-			font-size: 34px;
-		}
-		h3{
-			font-weight: normal;
-			font-family: "lato";
-			color: $gray-text-color;
-			font-size: 18px;
-		}
+.content-text{
+	text-align:center;
+	h1{
+		font-weight: normal;
+		font-size: 34px;
 	}
+	h3{
+		font-weight: normal;
+		font-family: "lato";
+		color: $gray-text-color;
+		font-size: 18px;
+	}
+}
 
-	.footer{
-		height:75px;
-		margin-top:80px;
-		h4{
-			font-size: 11px;
-			display: inline-block;
-			color: #7f7f7f;
-		}
+.footer{
+	height:75px;
+	margin-top:80px;
+	h4{
+		font-size: 11px;
+		display: inline-block;
+		color: #7f7f7f;
 	}
-	.create{
-		float:right;
-	}
+}
+.create{
+	float:right;
+}

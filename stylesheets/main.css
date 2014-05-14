@@ -41,6 +41,36 @@ body {
   display: inline-block;
   float: right;
   margin-top: 10px;
+  position: relative;
+  -webkit-box-flex: 1;
+  flex: 1 1 0px;
+  text-align: right;
+}
+
+@media screen and (max-width: 740px) {
+  .header-right {
+    left: 0;
+    right: 0;
+    top: 110px;
+    position: absolute;
+  }
+}
+.menu-button {
+  display: none;
+  margin: 0px;
+  padding: 0px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-button .menu-stripe {
+  display: block;
+  width: 23px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: rgba(27, 33, 36, 0.67059);
+  margin: 5px 0;
 }
 
 textarea {
@@ -48,6 +78,11 @@ textarea {
   margin-bottom: -10px;
 }
 
+@media screen and (max-width: 740px) {
+  .menu-nav-top {
+    display: none;
+  }
+}
 .lang-nav {
   text-align: right;
   margin: -15px 0 5px 0;
@@ -72,6 +107,7 @@ textarea {
 .menu-nav {
   text-align: right;
   margin: 0;
+  padding-left: 0;
 }
 .menu-nav li {
   display: inline-block;
@@ -83,6 +119,29 @@ textarea {
   color: #787878;
   font-size: 18px;
   text-decoration: none;
+}
+@media screen and (max-width: 740px) {
+  .menu-nav li {
+    padding-left: 0;
+    text-align: left;
+    display: block;
+    float: none;
+    background-color: white;
+    border-bottom: 1px solid #787878;
+  }
+  .menu-nav li a {
+    color: #787878;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: block;
+    padding: 8px 25px;
+  }
+}
+.menu-nav li:hover {
+  background-color: red;
 }
 
 .menu-nav .active {
